@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information System</title>
+
+    <style>
+        /* General Styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #173b70;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #24549a;
+            padding: 15px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #f0a500;
+            color: #173b70;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #173b70;
+            text-align: center;
+        }
+
+        /* Welcome Section */
+        .welcome {
+            text-align: center;
+            background-color: #dceafe;
+            line-height: 1.6;
+        }
+
+        /* Course Cards */
+        .course-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .course-card {
+            background-color: #edf3fa;
+            padding: 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-card h3 {
+            color: #24549a;
+        }
+
+        /* Student Profile */
+        .profile {
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        /* Attendance Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #24549a;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #edf3fa;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #173b70;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* TABLET VIEW */
+        @media screen and (max-width: 900px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            .course-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            main {
+                width: 95%;
+            }
+        }
+
+        /* MOBILE VIEW */
+        @media screen and (max-width: 600px) {
+            header {
+                padding: 20px 10px;
+            }
+
+            header h1 {
+                font-size: 21px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .course-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 8px 4px;
+            }
+
+            main {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>STUDENT INFORMATION SYSTEM</h1>
+        <p>Your Academic Journey Starts Here</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Student Profile</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#attendance">Attendance</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section id="home" class="welcome">
+            <h2>Welcome to Student Portal</h2>
+            <p>
+                The Student Information System helps students
+                manage their academic information in one place.
+                View your profile, courses and attendance details
+                easily through this portal.
+            </p>
+        </section>
+
+        <!-- Student Profile -->
+        <section id="profile" class="profile">
+            <h2>Student Profile</h2>
+            <p><b>Name:</b> Student Name</p>
+            <p><b>Student ID:</b> URK26CS9020</p>
+            <p><b>Department:</b> Computer Science</p>
+            <p><b>Semester:</b> First Semester</p>
+        </section>
+
+        <!-- Courses -->
+        <section id="courses">
+            <h2>My Courses</h2>
+
+            <div class="course-container">
+
+                <div class="course-card">
+                    <h3>Web Technology</h3>
+                    <p>Learn HTML, CSS and web development.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Digital Electronics</h3>
+                    <p>Study digital circuits and logic gates.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Mathematics</h3>
+                    <p>Learn mathematical concepts and applications.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Programming in C</h3>
+                    <p>Learn programming and problem solving.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Constitution of India</h3>
+                    <p>Learn about the Indian Constitution.</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Computer Fundamentals</h3>
+                    <p>Understand basic computer concepts.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Attendance -->
+        <section id="attendance">
+            <h2>Attendance Details</h2>
+
+            <table>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total Classes</th>
+                    <th>Attended</th>
+                    <th>Percentage</th>
+                </tr>
+
+                <tr>
+                    <td>Web Technology</td>
+                    <td>30</td>
+                    <td>27</td>
+                    <td>90%</td>
+                </tr>
+
+                <tr>
+                    <td>Digital Electronics</td>
+                    <td>30</td>
+                    <td>25</td>
+                    <td>83%</td>
+                </tr>
+
+                <tr>
+                    <td>Mathematics</td>
+                    <td>30</td>
+                    <td>28</td>
+                    <td>93%</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Email: student@example.com</p>
+            <p>Student Support: Available during college hours</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Student Information System</p>
+        <p>All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
